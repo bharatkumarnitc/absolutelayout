@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="First Name *" />
+
+                    <EditText
+                        android:id="@+id/fname"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Last name" />
+
+                    <EditText
+                        android:id="@+id/lname"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Email" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="297dp"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/open_sans_light"
+                    android:textSize="16dp" />
+
+
+                <ImageView
+
+                    android:id="@+id/imagestatusemail"
+                    android:layout_width="52dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/txtviewstatusemail"
+                    android:layout_width="69dp"
+                    android:layout_height="29dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:textColor="#ff9800"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/emailbtnsend"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/my_button_bg"
+                android:fontFamily="@font/open_sans"
+                android:text="VERIFY EMAIL ADDRESS"
+                android:textColor="#ff5f2c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Mobile number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+
+                    android:id="@+id/ccp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    app:ccp_defaultNameCode="IN" />
+
+                <EditText
+                    android:id="@+id/mobile"
+                    android:layout_width="174dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/imagestatusmobile"
+                    android:layout_width="52dp"
+                    android:layout_height="28dp"
+                   />
+
+                <TextView
+                    android:id="@+id/txtviewstatusmobile"
+                    android:layout_width="69dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/otpsendbt"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/my_button_bg"
+                android:fontFamily="@font/open_sans"
+                android:text="GET VERIFICATION CODE"
+                android:textColor="#ff5f2c" />
+
+            <TextView
+
+                android:id="@+id/otpmessage"
+                android:layout_width="362dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/oswald"
+                android:text="Now enter the 6-digit code send via SMS"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/otpet"
+                android:layout_width="228dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:inputType="number"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/otpverify"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#ff5f2c"
+                android:fontFamily="@font/open_sans"
+                android:text="VERIFY"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/passmgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Change Password"
+                android:textColor="#373737" />
+
+            <TextView
+                android:id="@+id/passoldmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Old Password"
+                android:textColor="#979797" />
+
+            <EditText
+                android:id="@+id/etoldpass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/passnewmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Enter new password"
+                android:textColor="#979797" />
+
+            <EditText
+                android:id="@+id/etnewpass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="At least 8 charactor"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/passremsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Retype new password"
+                android:textColor="#979797" />
+
+            <EditText
+                android:id="@+id/etrepasss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="At least 8 charactor"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/passsubmitbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="124dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="124dp"
+                android:background="@drawable/my_button_bg"
+                android:text="SAVE PASSWORD"
+                android:textColor="#ff5f2c" />
+
+            <TextView
+                android:id="@+id/forgetpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/open_sans"
+                android:text="FORGET PASSWORD"
+                android:textColor="#a369e8" />
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:id="@+id/changepass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="250dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:text="CHANGE PASSWORD"
+                android:textColor="#a369e8" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
